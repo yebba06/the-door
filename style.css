@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #050505;
+  color: #eeeeee;
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  padding: 40px;
+  animation: fadeIn 1.2s ease;
+}
+
+.warning {
+  color: #666;
+  font-family: monospace;
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: clamp(36px, 7vw, 64px);
+  letter-spacing: 8px;
+  line-height: 1.15;
+  margin: 30px 0 20px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+.message {
+  color: #888;
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 3px;
+}
+
+button {
+  margin-top: 40px;
+  padding: 16px 32px;
+  background: transparent;
+  color: #eee;
+  border: 1px solid #444;
+  cursor: pointer;
+  font-family: monospace;
+  letter-spacing: 3px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #eee;
+  color: #050505;
+  border-color: #eee;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+input {
+  margin-top: 30px;
+  padding: 15px 18px;
+  width: min(320px, 80%);
+  background: background:
+  radial-gradient(circle at center, #101010 0%, #050505 55%, #000000 100%);
+  color: #eee;
+  border: 1px solid #444;
+  outline: none;
+  font-family: monospace;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+input:focus {
+  border-color: #888;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+#result,
+#result2,
+#result3,
+#result4,
+#result5 {
+  margin-top: 25px;
+  color: #aaa;
+  font-family: monospace;
+  letter-spacing: 2px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 25px;
+  }
+
+  .message {
+    font-size: 15px;
+  }
+
+  h1 {
+    letter-spacing: 5px;
+  }
+}
+.warning {
+  animation: warningFlicker 4s infinite;
+}
+
+@keyframes warningFlicker {
+  0%, 92%, 100% {
+    opacity: 1;
+  }
+
+  93% {
+    opacity: 0.3;
+  }
+
+  94% {
+    opacity: 1;
+  }
+
+  96% {
+    opacity: 0.5;
+  }
+
+  97% {
+    opacity: 1;
+  }
+}
